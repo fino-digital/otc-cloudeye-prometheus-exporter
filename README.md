@@ -1,10 +1,11 @@
 [![Apache 2.0 License](http://img.shields.io/badge/license-Apache%202.0-green.svg?style=flat)](LICENSE) [![Prometheus OTC Exporter](https://img.shields.io/badge/prometheus-OTC%20CloudEye%20Exporter-red.svg?style=flat)](https://prometheus.io/docs/instrumenting/exporters/#other-monitoring-systems) [![Kanban board](https://img.shields.io/badge/kanban-Trello-blue.svg?style=flat)](https://trello.com/b/IgXJprlt) 
 
-
 # OTC CloudEye Prometheus Exporter
+
 Prometheus exporter that gather metrics from Open Telekom Cloud resources over Cloud Eye API
 
-### Environment Variables
+## Environment Variables
+
 Name     | Description | Possible Values | Default Value
 ---------|-------------|-----------------|-----------
 REFRESH_TIME | Time in seconds that exporter wait's to gather metrics again | Integer >60 | 300
@@ -48,17 +49,17 @@ services:
         - <otc-exporter-address>:8000
 ```
 
-### Grafana Dashboards
+## Grafana Dashboards
+
 Grafana Dashboards for some OTC services are available on the [Grafana Community catalog](https://grafana.com/orgs/tiagoreichert)
 
 ---
 
-#### Known Limitations
+### Known Limitations
+
 For every metric value it's needed to make a request against the Cloud Eye API.
-Unfortunately, there is no other way to gather metric information from the Cloud Eye 
+Unfortunately, there is no other way to gather metric information from the Cloud Eye
 API and accordingly the oficial support it's not planned to be released such feature.
-Bearing that in mind, take care to not include to much OTC resources, that can be 
-limited using the NAMESPACES environment parameter. 
+Bearing that in mind, take care to not include to much OTC resources, that can be
+limited using the NAMESPACES environment parameter.
 (The threshold of requests against the OTC API allowed is less than 140 times in one minute)
-
-
