@@ -4,6 +4,10 @@
 
 Prometheus exporter that gather metrics from Open Telekom Cloud resources over Cloud Eye API
 
+## DEPRECATION NOTICE
+
+This repository is no longer maintained. We encourage you to migrate to <https://github.com/fino-digital/cloudeye-exporter>
+
 ## Environment Variables
 
 Name     | Description | Possible Values | Default Value
